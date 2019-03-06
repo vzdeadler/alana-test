@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SquaresDivisorsPageModule } from '../pages/squares-divisors/squares-divisors.module';
 import { RangeServiceProvider } from '../providers/range-service/range-service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RangeServiceProvider } from '../providers/range-service/range-service';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    SquaresDivisorsPageModule
+    SquaresDivisorsPageModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
