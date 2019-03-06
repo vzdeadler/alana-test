@@ -1,0 +1,38 @@
+$alana-color: rgb(221, 74, 88);
+
+page-home {
+    text-align: center;
+
+    p {
+        font-size: 15px;
+    }
+
+    h1 {
+        margin: 20px 10px;
+    }
+
+}
+
+.img-container {
+    height: 40%;
+    position: relative;
+
+    img {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+.join-btn {
+    border-radius: 60px;
+    width: 60%;
+    background-color: $alana-color;
+    height: 60px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 15px;
+}
