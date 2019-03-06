@@ -1,5 +1,7 @@
 {
   "name": "alana-test",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

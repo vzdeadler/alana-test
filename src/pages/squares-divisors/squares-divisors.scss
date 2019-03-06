@@ -1,7 +1,38 @@
 page-squares-divisors {
     text-align: center;
+    height: 100%;
+
+    ion-label {
+        font-size: 20px;
+    }
+
+    // .squares_content {
+    //     margin: 0;
+    //     position: absolute;
+    //     top: 50%;
+    //     -ms-transform: translateY(-50%);
+    //     transform: translateY(-50%);
+    // }
 
     .range-input {
         padding-left: 0px;
     }
+
+    // .back-btn {
+    //     position: absolute;
+    //     left: 0;
+    //     bottom: 20px;
+    //     right: 0;
+    //     margin: 0 auto;
+    // }
+}
+
+.toastClass {
+    .toast-wrapper{
+        background-color: #de2f40;
+        width: 95%;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+
 }

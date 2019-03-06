@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SquaresDivisorsPageModule } from '../pages/squares-divisors/squares-divisors.module';
+import { RangeServiceProvider } from '../providers/range-service/range-service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SquaresDivisorsPageModule } from '../pages/squares-divisors/squares-div
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    RangeServiceProvider
   ]
 })
 export class AppModule {}
