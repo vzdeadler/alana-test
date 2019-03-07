@@ -65,11 +65,13 @@ export class SquaresDivisorsPage {
 
   //This function validate the range inputs, then call generateValues()
   validateRanges(): void {
+    let minimum = +this.minimum;
+    let maximum = +this.maximum;
     if (!this.minimum || !this.maximum){
       this.presentToast('You must insert both ranges.');
-    } else if ((this.minimum < 0) || (this.maximum < 0)){
+    } else if ((minimum < 0) || (maximum < 0)){
       this.presentToast('The ranges must be positive.');
-    } else if (this.minimum > this.maximum){
+    } else if (minimum > maximum){
       this.presentToast('The minimum range can not be higher than maximum.');
     } else {
       this.generateValues();
@@ -91,10 +93,10 @@ export class SquaresDivisorsPage {
 
   //This function generate all the values, calling getSquaresDivisors.
   generateValues(): void {
-    let diference = this.maximum - this.minimum;
+    let diference = (+this.maximum) - (+this.minimum);
     console.log(diference);
 
-    for(let i = this.minimum; i <= this.maximum; i ++)
+    for(let i = (+this.minimum); i <= (+this.maximum); i ++)
       this.values[i] = this.getSquaresDivisors(i);
 
     this.resultsView = true;
@@ -104,9 +106,14 @@ export class SquaresDivisorsPage {
   //This function print the final value.
   printValue(): void {
     this.value = undefined;
+
+    let option = +this.option;
+    let maximum = +this.maximum;
+    let minimum = + this.minimum;
+
     if(!this.option){
       this.presentToast('You must insert the value.');
-    }else if((this.option < this.minimum) || (this.option > this.maximum)){
+    }else if((option < minimum) || (option > maximum)){
       this.presentToast('The value must be between the range.');
     }else{
       this.value = 'The value of ' + this.option + ' is ' + this.values[this.option];
